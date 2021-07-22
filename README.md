@@ -1,2 +1,7 @@
 # retrolist-frontend
-NextJS, React, Apollo Client Retrolist frontend
+
+A simple todo app using
+
+- NextJS
+- React
+- Apollo Client Retrolist frontend
