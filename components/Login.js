@@ -7,8 +7,8 @@ import DisplayError from './ErrorMessage';
 import FormStyles from './styles/FormStyles';
 
 // sign in in with keystone graphql
-const SIGNIN_MUTATION = gql`
-    mutation SIGNIN_MUTATION($email: String!, $password: String!) {
+const LOGIN_MUTATION = gql`
+    mutation LOGIN_MUTATION($email: String!, $password: String!) {
         authenticateUserWithPassword(email: $email, password: $password) {
             # on success, returns this
             ... on UserAuthenticationWithPasswordSuccess {
@@ -34,10 +34,11 @@ const Login = () => {
         password: '',
     });
 
-    const [handleSignIn, { data, loading }] = useMutation(SIGNIN_MUTATION, {
+    const [handleSignIn, { data, loading }] = useMutation(LOGIN_MUTATION, {
         variables: inputs,
         // refetch the currently logged in user
         refetchQueries: [{ query: CURRENT_USER_QUERY }],
+        awaitRefetchQueries: true,
     });
 
     // the query completes successfully, so we need to check for the failure type "UserAuthenticationWithPasswordFailure"

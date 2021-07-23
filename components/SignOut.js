@@ -16,7 +16,11 @@ const SignOut = () => {
     });
 
     return (
-        <button type="button" className="btn btn-error" onClick={signOut}>
+        <button
+            type="button"
+            className="btn btn-primary btn-ghost"
+            onClick={signOut}
+        >
             Sign Out
         </button>
     );

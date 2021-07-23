@@ -5,32 +5,32 @@ h4,
 h5,
 h6,
 .logo {
-    line-height: --global-line-height;
+    line-height: var(--global-line-height);
 }
 
 a {
     cursor: pointer;
-    color: --primary-color;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 a:hover {
-    background-color: --primary-color;
-    color: --invert-font-color;
+    background-color: var(--primary-color);
+    color: var(--invert-font-color);
 }
 
 em {
-    font-size: --global-font-size;
+    font-size: var(--global-font-size);
     font-style: italic;
-    font-family: --font-family;
-    color: --font-color;
+    font-family: var(--font-family);
+    color: var(--font-color);
 }
 
 blockquote,
 code,
 em,
 strong {
-    line-height: --global-line-height;
+    line-height: var(--global-line-height);
 }
 
 blockquote,
@@ -60,8 +60,8 @@ ol,
 p,
 ul,
 .logo {
-    margin-top: calc(--global-space * 2);
-    margin-bottom: calc(--global-space * 2);
+    margin-top: calc(var(--global-space) * 2);
+    margin-bottom: calc(var(--global-space) * 2);
 }
 
 h1,
@@ -69,7 +69,7 @@ h1,
     position: relative;
     display: inline-block;
     display: table-cell;
-    padding: calc(--global-space * 2) 0 calc(--global-space * 2);
+    padding: calc(var(--global-space) * 2) 0 calc(var(--global-space) * 2);
     margin: 0;
     overflow: hidden;
     font-weight: 600;
@@ -80,7 +80,7 @@ h1::after {
     position: absolute;
     bottom: 5px;
     left: 0;
-    display: --display-h1-decoration;
+    display: var(--display-h1-decoration);
 }
 
 h1 + *,
@@ -94,13 +94,13 @@ h4,
 h5,
 h6 {
     position: relative;
-    margin-bottom: --global-line-height;
+    margin-bottom: var(--global-line-height);
     font-weight: 600;
 }
 
 blockquote {
     position: relative;
-    padding-left: calc(--global-space * 2);
+    padding-left: calc(var(--global-space) * 2);
     padding-left: 2ch;
     overflow: hidden;
 }
@@ -111,14 +111,14 @@ blockquote::after {
     position: absolute;
     top: 0;
     left: 0;
-    line-height: --global-line-height;
-    color: --quote-color;
+    line-height: var(--global-line-height);
+    color: var(--quote-color);
 }
 
 code {
     font-weight: inherit;
-    background-color: --code-bg-color;
-    font-family: --font-family;
+    background-color: var(--code-bg-color);
+    font-family: var(--font-family);
 }
 
 code::after,
@@ -136,10 +136,10 @@ pre {
     display: block;
     word-break: break-all;
     word-wrap: break-word;
-    color: --secondary-color);
-    background-color: --background-color;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
     border: 1px solid --secondary-color;
-    padding: --global-space;
+    padding: var(--global-space);
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
@@ -152,7 +152,7 @@ pre code {
     margin: 0;
     display: inline-block;
     min-width: 100%;
-    font-family: --font-family;
+    font-family: var(--font-family);
 }
 
 .terminal blockquote,
@@ -165,10 +165,10 @@ pre code {
 .terminal h6,
 .terminal strong,
 .terminal .logo {
-    font-size: --global-font-size;
+    font-size: var(--global-font-size);
     font-style: normal;
-    font-family: --font-family;
-    color: --font-color;
+    font-family: var(--font-family);
+    color: var(--font-color);
 }
 
 .terminal-prompt {
@@ -183,7 +183,7 @@ pre code {
 .terminal-prompt::after {
     content: '';
     animation: cursor 800ms infinite;
-    background: --primary-color;
+    background: var(--primary-color);
     border-radius: 0;
     display: inline-block;
     height: 1em;
@@ -225,7 +225,7 @@ li,
 li > ul > li {
     position: relative;
     display: block;
-    padding-left: calc(--global-space * 2);
+    padding-left: calc(var(--global-space) * 2);
 }
 
 nav > ul > li {
@@ -296,7 +296,7 @@ ul ul {
     flex-direction: column;
     width: 100%;
     flex-grow: 1;
-    font-size: --global-font-size;
+    font-size: var(--global-font-size);
     margin-top: 0;
 }
 
@@ -307,7 +307,7 @@ ul ul {
 }
 
 ol.terminal-toc li {
-    border-bottom: 1px dotted --secondary-color;
+    border-bottom: 1px dotted var(--secondary-color);
     padding: 0;
     margin-bottom: 15px;
 }
@@ -318,7 +318,7 @@ ol.terminal-toc li {
 
 ol.terminal-toc li a {
     margin: 4px 4px 4px 0;
-    background: --background-color;
+    background: var(--background-color);
     position: relative;
     top: 6px;
     text-align: left;
@@ -330,11 +330,11 @@ ol.terminal-toc li a {
     display: block;
     width: 100%;
     border: none;
-    color: --secondary-color;
+    color: var(--secondary-color);
 }
 
 .terminal-menu li a.active {
-    color: --font-color;
+    color: var(--font-color);
 }
 
 .terminal-menu li a:hover {
@@ -347,37 +347,37 @@ ol.terminal-toc li::before {
     counter-increment: item;
     position: absolute;
     right: 0;
-    background: --background-color;
+    background: var(--background-color);
     padding: 4px 0 4px 4px;
     bottom: -8px;
 }
 
 ol.terminal-toc li a:hover {
-    background: --primary-color;
-    color: --invert-font-color;
+    background: var(--primary-color);
+    color: var(--invert-font-color);
 }
 
 hr {
     position: relative;
     overflow: hidden;
-    margin: calc(--global-space * 4) 0;
+    margin: calc(var(--global-space) * 4) 0;
     border: 0;
-    border-bottom: 1px dashed --secondary-color;
+    border-bottom: 1px dashed var(--secondary-color);
 }
 
 p {
     margin: 0 0 --global-line-height;
-    color: --global-font-color;
+    color: var(--global-font-color);
 }
 
 .container {
-    max-width: --page-width;
+    max-width: var(--page-width);
 }
 
 .container,
 .container-fluid {
     margin: 0 auto;
-    padding: 0 calc(--global-space * 2);
+    padding: 0 calc(var(--global-space) * 2);
 }
 
 img {
@@ -386,7 +386,7 @@ img {
 
 .progress-bar {
     height: 8px;
-    background-color: --progress-bar-background;
+    background-color: var(--progress-bar-background);
     margin: 12px 0;
 }
 
@@ -395,7 +395,7 @@ img {
 }
 
 .progress-bar-filled {
-    background-color: --progress-bar-fill;
+    background-color: var(--progress-bar-fill);
     height: 100%;
     transition: width 0.3s ease;
     position: relative;
@@ -405,14 +405,14 @@ img {
 .progress-bar-filled::before {
     content: '';
     border: 6px solid transparent;
-    border-top-color: --progress-bar-fill;
+    border-top-color: var(--progress-bar-fill);
     position: absolute;
     top: -12px;
     right: -6px;
 }
 
 .progress-bar-filled::after {
-    color: --progress-bar-fill;
+    color: var(--progress-bar-fill);
     content: attr(data-filled);
     display: block;
     font-size: 12px;
@@ -436,17 +436,17 @@ img {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: --global-line-height 0;
-    color: --font-color;
-    font-size: --global-font-size;
+    margin: var(--global-line-height) 0;
+    color: var(--font-color);
+    font-size: var(--global-font-size);
 }
 
 table td,
 table th {
     vertical-align: top;
     border: 1px solid --font-color;
-    line-height: --global-line-height;
-    padding: calc(--global-space) / 2;
+    line-height: var(--global-line-height);
+    padding: calc(var(--global-space) / 2);
     font-size: 1em;
 }
 
@@ -465,7 +465,7 @@ table caption {
 
 table tbody td:first-child {
     font-weight: 700;
-    color: --secondary-color;
+    color: var(--secondary-color);
 }
 
 .form {
@@ -479,7 +479,7 @@ fieldset {
 
 label {
     font-size: 1em;
-    color: --font-color;
+    color: var(--font-color);
 }
 
 input[type='email'],
@@ -491,7 +491,7 @@ input[type='search'] {
     width: 100%;
     padding: 0.7em 0.5em;
     font-size: 1em;
-    font-family: --font-family;
+    font-family: var(--font-family);
     -webkit-appearance: none;
     border-radius: 0;
 }
@@ -516,18 +516,18 @@ input[type='email']:not(:placeholder-shown):invalid,
 input[type='password']:not(:placeholder-shown):invalid,
 input[type='search']:not(:placeholder-shown):invalid,
 input[type='number']:not(:placeholder-shown):invalid {
-    border-color: --error-color;
+    border-color: var(--error-color);
 }
 
 input,
 textarea {
-    color: --font-color;
-    background-color: --background-color;
+    color: var(--font-color);
+    background-color: var(--background-color);
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: --secondary-color;
+    color: var(--secondary-color);
     opacity: 1;
 }
 
@@ -538,7 +538,7 @@ textarea {
     border: 1px --input-style --font-color;
     padding: 0.5em;
     font-size: 1em;
-    font-family: --font-family;
+    font-family: var(--font-family);
     -webkit-appearance: none;
     border-radius: 0;
 }
@@ -550,7 +550,7 @@ textarea:focus {
 }
 
 textarea:not(:placeholder-shown):invalid {
-    border-color: --error-color;
+    border-color: var(--error-color);
 }
 
 input:-webkit-autofill,
@@ -561,14 +561,14 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     border: 1px solid --font-color;
-    -webkit-text-fill-color: --font-color;
+    -webkit-text-fill-color: var(--font-color);
     box-shadow: 0 0 0 1000px --invert-font-color inset;
     -webkit-box-shadow: 0 0 0 1000px --invert-font-color inset;
     transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-group {
-    margin-bottom: --global-line-height;
+    margin-bottom: var(--global-line-height);
     overflow: auto;
 }
 
@@ -599,15 +599,15 @@ select:-webkit-autofill:focus {
 }
 
 .btn.btn-ghost {
-    border-color: --font-color;
-    color: --font-color;
+    border-color: var(--font-color);
+    color: var(--font-color);
     background-color: transparent;
 }
 
 .btn.btn-ghost:focus,
 .btn.btn-ghost:hover {
-    border-color: --tertiary-color;
-    color: --tertiary-color;
+    border-color: var(--tertiary-color);
+    color: var(--tertiary-color);
     z-index: 2;
 }
 
@@ -622,69 +622,69 @@ select:-webkit-autofill:focus {
 }
 
 .btn-default {
-    background-color: --font-color;
-    border-color: --invert-font-color;
-    color: --invert-font-color;
+    background-color: var(--font-color);
+    border-color: var(--invert-font-color);
+    color: var(--invert-font-color);
 }
 
 .btn-default:hover,
 .btn-default:focus:not(.btn-ghost) {
-    background-color: --secondary-color;
-    color: --invert-font-color;
+    background-color: var(--secondary-color);
+    color: var(--invert-font-color);
 }
 
 .btn-default.btn-ghost:focus,
 .btn-default.btn-ghost:hover {
-    border-color: --secondary-color;
-    color: --secondary-color;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
     z-index: 2;
 }
 
 .btn-error {
-    color: --invert-font-color;
-    background-color: --error-color;
+    color: var(--invert-font-color);
+    background-color: var(--error-color);
     border: 1px solid --error-color;
 }
 
 .btn-error:hover,
 .btn-error:focus:not(.btn-ghost) {
-    background-color: --error-color;
-    border-color: --error-color;
+    background-color: var(--error-color);
+    border-color: var(--error-color);
 }
 
 .btn-error.btn-ghost {
-    border-color: --error-color;
-    color: --error-color;
+    border-color: var(--error-color);
+    color: var(--error-color);
 }
 
 .btn-error.btn-ghost:focus,
 .btn-error.btn-ghost:hover {
-    border-color: --error-color;
-    color: --error-color;
+    border-color: var(--error-color);
+    color: var(--error-color);
     z-index: 2;
 }
 
 .btn-primary {
-    color: --invert-font-color;
-    background-color: --primary-color;
-    border: 1px solid --primary-color;
+    color: var(--invert-font-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .btn-primary:hover,
 .btn-primary:focus:not(.btn-ghost) {
-    background-color: --primary-color;
-    border-color: --primary-color;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-primary.btn-ghost {
-    border-color: --primary-color;
-    color: --primary-color;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn-primary.btn-ghost:focus,
 .btn-primary.btn-ghost:hover {
-    border-color: --primary-color;
-    color: --primary-color;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
     z-index: 2;
 }
 
@@ -710,14 +710,14 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-card > header {
-    color: --invert-font-color;
+    color: var(--invert-font-color);
     text-align: center;
-    background-color: --secondary-color;
+    background-color: var(--secondary-color);
     padding: 0.5em 0;
 }
 
 .terminal-card > div:first-of-type {
-    padding: --global-space;
+    padding: var(--global-space);
 }
 
 .terminal-timeline {
@@ -727,7 +727,7 @@ select:-webkit-autofill:focus {
 
 .terminal-timeline::before {
     content: ' ';
-    background: --secondary-color;
+    background: var(--secondary-color);
     display: inline-block;
     position: absolute;
     left: 35px;
@@ -742,7 +742,7 @@ select:-webkit-autofill:focus {
 
 .terminal-timeline .terminal-card::before {
     content: ' ';
-    background: --invert-font-color;
+    background: var(--invert-font-color);
     border: 2px solid --secondary-color;
     display: inline-block;
     position: absolute;
@@ -754,20 +754,20 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-alert {
-    color: --font-color;
+    color: var(--font-color);
     padding: 1em;
     border: 1px solid --font-color;
-    margin-bottom: --global-space;
+    margin-bottom: var(--global-space);
 }
 
 .terminal-alert-error {
-    color: --error-color;
-    border-color: --error-color;
+    color: var(--error-color);
+    border-color: var(--error-color);
 }
 
 .terminal-alert-primary {
-    color: --primary-color;
-    border-color: --primary-color;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 @media screen and (max-width: 960px) {
@@ -798,7 +798,7 @@ select:-webkit-autofill:focus {
         justify-items: flex-end;
         align-items: center;
         justify-content: flex-end;
-        margin-top: calc(--global-space * 2);
+        margin-top: calc(var(--global-space) * 2);
     }
 
     .terminal-menu li {
@@ -816,7 +816,7 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-media-left {
-    padding-right: --global-space;
+    padding-right: var(--global-space);
 }
 
 .terminal-media-left,
@@ -826,7 +826,7 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-media-right {
-    padding-left: --global-space;
+    padding-left: var(--global-space);
 }
 
 .terminal-media-body {
@@ -844,9 +844,9 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-placeholder {
-    background-color: --secondary-color);
+    background-color: var(--secondary-color));
     text-align: center;
-    color: --font-color;
+    color: var(--font-color);
     font-size: 1rem;
     border: 1px solid --secondary-color;
 }
@@ -856,8 +856,8 @@ figure > img {
 }
 
 .terminal-avatarholder {
-    width: calc(--global-space * 5);
-    height: calc(--global-space * 5);
+    width: calc(var(--global-space) * 5);
+    height: calc(var(--global-space) * 5);
 }
 
 .terminal-avatarholder img {
@@ -869,7 +869,7 @@ figure {
 }
 
 figure > figcaption {
-    color: --secondary-color;
+    color: var(--secondary-color);
     text-align: center;
 }
 
@@ -877,17 +877,17 @@ figure > figcaption {
     display: block;
     overflow-x: auto;
     padding: 0.5em;
-    background: --block-background-color;
-    color: --font-color;
+    background: var(--block-background-color);
+    color: var(--font-color);
 }
 
 .hljs-comment,
 .hljs-quote {
-    color: --secondary-color;
+    color: var(--secondary-color);
 }
 
 .hljs-variable {
-    color: --font-color;
+    color: var(--font-color);
 }
 
 .hljs-keyword,
@@ -895,7 +895,7 @@ figure > figcaption {
 .hljs-built_in,
 .hljs-name,
 .hljs-tag {
-    color: --primary-color;
+    color: var(--primary-color);
 }
 
 .hljs-string,
@@ -907,32 +907,32 @@ figure > figcaption {
 .hljs-template-variable,
 .hljs-type,
 .hljs-addition {
-    color: --secondary-color;
+    color: var(--secondary-color);
 }
 
 .hljs-string {
-    color: --secondary-color;
+    color: var(--secondary-color);
 }
 
 .hljs-deletion,
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-meta {
-    color: --primary-color;
+    color: var(--primary-color);
 }
 
 .hljs-doctag {
-    color: --secondary-color;
+    color: var(--secondary-color);
 }
 
 .hljs-attr {
-    color: --primary-color;
+    color: var(--primary-color);
 }
 
 .hljs-symbol,
 .hljs-bullet,
 .hljs-link {
-    color: --primary-color;
+    color: var(--primary-color);
 }
 
 .hljs-emphasis {
