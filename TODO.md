@@ -1,5 +1,6 @@
--   Fix login error
--   Test Signin and SignOut
--   Implement Lists
--   Implement List
--   Implement Profile
+-   Implement Create List
+-   Positioning and Style Signin / SignOut
+-   Style Lists (second line: entries and items)
+-   Implement Profile and Settings, place SignOut there
+-   Refactor Item and ItemEdit
+-   Refactor Mutations to Interaction Layer
