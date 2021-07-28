@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
+import CreateItems from '../components/CreateItems';
 import { useUser } from '../hooks/useUser';
 
 const Lists = () => {

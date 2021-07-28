@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
+import Div100vh from 'react-div-100vh';
 import styled, { createGlobalStyle } from 'styled-components';
+import Footer from './Footer';
 import Header from './Header';
 import Scanline from './Scanline';
 
@@ -63,6 +65,7 @@ const GlobalStyles = createGlobalStyle`
 }`;
 
 const PageStyles = styled.div`
+    height: 100%;
     /* grid container settings */
     display: grid;
     grid-template-columns: 1fr;
@@ -80,12 +83,15 @@ const MainStyles = styled.main`
 `;
 
 const Page = ({ children }) => (
-    <PageStyles>
-        <GlobalStyles />
-        <Scanline />
-        <Header />
-        <MainStyles>{children}</MainStyles>
-    </PageStyles>
+    <Div100vh>
+        <PageStyles>
+            <GlobalStyles />
+            <Scanline />
+            <Header />
+            <MainStyles>{children}</MainStyles>
+            <Footer />
+        </PageStyles>
+    </Div100vh>
 );
 
 export default Page;

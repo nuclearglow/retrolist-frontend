@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql, useLazyQuery, useQuery } from '@apollo/client';
 import styled from 'styled-components';
 import ErrorMessage from './ErrorMessage';
 import Item from './Item';
@@ -42,15 +42,20 @@ const List = ({ id }) => {
         return <ErrorMessage error={error} />;
     }
 
+    const itemsNeeded =
+        list?.items?.reduce(
+            (accumulated, current) => accumulated + current.quantity,
+            0
+        ) ?? 0;
+
     return (
         <ListStyles>
             {list?.items?.length === 0 && (
                 <h3>Ready to go! What do you need?</h3>
             )}
-            {list?.items?.length > 0 && (
-                <h3>I need {list.items.length} things:</h3>
-            )}
-            {/* <pre>{JSON.stringify(list, null, '\t')}</pre> */}
+
+            {itemsNeeded > 0 && <h3>I need {itemsNeeded} things:</h3>}
+
             <div className="items">
                 {list?.items?.map((item) => (
                     <Item key={item.id} item={item} />
