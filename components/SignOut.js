@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import { LogOut } from 'react-feather';
 import { CURRENT_USER_QUERY } from '../hooks/useUser';
 
 // sign in in with keystone graphql
@@ -21,7 +22,7 @@ const SignOut = () => {
             className="btn btn-primary btn-ghost"
             onClick={signOut}
         >
-            Sign Out
+            <LogOut />
         </button>
     );
 };

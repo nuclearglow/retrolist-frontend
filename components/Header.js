@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import Nav from './Nav';
+import Title from './Title';
 
 const HeaderStyles = styled.header`
     grid-area: header;
@@ -13,7 +13,7 @@ const HeaderStyles = styled.header`
 
 const Header = () => (
     <HeaderStyles>
-        <Link href="/">Retrolist</Link>
+        <Title />
         <Nav />
     </HeaderStyles>
 );

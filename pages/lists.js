@@ -13,7 +13,19 @@ const Lists = () => {
             </p>
         );
     }
-    return <p>lists</p>;
+    return (
+        <ul>
+            {user.lists?.map((list) => (
+                <li key={list.id}>
+                    <Link href={`/list/${list.id}`}>
+                        <a>
+                            {list.title} ({list.items.length} entries)
+                        </a>
+                    </Link>
+                </li>
+            ))}
+        </ul>
+    );
 };
 
 export default Lists;

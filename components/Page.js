@@ -1,16 +1,9 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
+import Scanline from './Scanline';
 
 const GlobalStyles = createGlobalStyle`
-    @font-face {
-        font-family: 'Hack';
-        src: url('/static/fonts/hack-regular.woff2') format('woff2'),
-            url('/static/fonts/hack-regular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
 
     *, *::before, *::after {
         box-sizing: border-box;
@@ -55,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background-color: var(--background-color);
-        font-family: var(--font-family, monospace);
+        font-family: var(--font-family), monospace;
         font-size: var(--global-font-size);
         line-height: var(--global-line-height);
         color: var(--font-color);
@@ -83,12 +76,13 @@ const PageStyles = styled.div`
 const MainStyles = styled.main`
     grid-area: main;
     overflow: auto;
-    margin: auto;
+    margin: 10%;
 `;
 
 const Page = ({ children }) => (
     <PageStyles>
         <GlobalStyles />
+        <Scanline />
         <Header />
         <MainStyles>{children}</MainStyles>
     </PageStyles>

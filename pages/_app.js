@@ -5,6 +5,8 @@ import Page from '../components/Page';
 
 import '../components/styles/nprogress.css';
 import '../components/styles/terminal.css';
+import '../components/styles/fonts.css';
+import '../components/styles/animations.css';
 
 import withData from '../lib/withData';
 

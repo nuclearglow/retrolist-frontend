@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { LogIn, UserPlus } from 'react-feather';
 import styled from 'styled-components';
 import { useUser } from '../hooks/useUser';
 import SignOut from './SignOut';
@@ -22,11 +23,11 @@ const Nav = () => {
             {!user && (
                 <ul>
                     <Link href="/signin" className="terminal-item">
-                        Login
+                        <LogIn />
                     </Link>
                     &nbsp;
                     <Link href="/signin" className="terminal-item">
-                        Register
+                        <UserPlus />
                     </Link>
                 </ul>
             )}

@@ -1,0 +1,9 @@
+{
+  "name": "retrolist.svenvowe.de",
+  "short_name": "retrolist.svenvowe.de",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#673ab8"
+}

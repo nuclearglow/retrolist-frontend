@@ -9,12 +9,12 @@ export const CURRENT_USER_QUERY = gql`
                 name
                 lists {
                     id
-                    name
-                    description
+                    title
+                    subtitle
                     items {
                         id
+                        title
                         quantity
-                        name
                     }
                 }
             }
