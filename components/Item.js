@@ -27,7 +27,6 @@ export const ItemStyles = styled.div`
     }
 `;
 
-// TODO
 const SAVE_ITEM_MUTATION = gql`
     mutation SAVE_ITEM_MUTATION($id: ID!, $title: String!, $quantity: Int!) {
         updateItem(id: $id, data: { title: $title, quantity: $quantity }) {

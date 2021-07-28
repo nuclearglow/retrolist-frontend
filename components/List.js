@@ -1,4 +1,4 @@
-import { gql, useLazyQuery, useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 import styled from 'styled-components';
 import ErrorMessage from './ErrorMessage';
 import Item from './Item';
@@ -54,7 +54,11 @@ const List = ({ id }) => {
                 <h3>Ready to go! What do you need?</h3>
             )}
 
-            {itemsNeeded > 0 && <h3>I need {itemsNeeded} things:</h3>}
+            {itemsNeeded > 0 && (
+                <h3>
+                    I need {itemsNeeded} thing{itemsNeeded > 1 ? 's' : ''}:
+                </h3>
+            )}
 
             <div className="items">
                 {list?.items?.map((item) => (

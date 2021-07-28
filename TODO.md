@@ -1,4 +1,5 @@
--   Implement Create List
+-   Implement Delete List
+-   Add feather Icons with prop size={48}
 -   Positioning and Style Signin / SignOut
 -   Style Lists (second line: entries and items)
 -   Implement Profile and Settings, place SignOut there
